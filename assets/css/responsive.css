@@ -1,0 +1,208 @@
+/* PC */
+@media (min-width: 992px) {
+    .mobile__header {
+        display: none;
+    }
+}
+
+/* Tablet && Mobile */
+@media (max-width: 991.98px) {
+    /* 1.Ẩn navbar */
+    .nav__bar {
+        display: none;
+    }
+
+    /* 2.Chuyển logo vào giữa */
+    .logo__group {
+        transform: translateX(300px);
+    }
+    .login__group {
+        transform: translateX(-30px);
+    }
+
+    /* 3.Căn sidebars */
+    .header__top {
+        position: relative;
+    }
+
+    .mobile__header-icon {
+        position: absolute;
+        top: 46px;
+        left: 70px;
+        width: 40px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    /* 4.overlay */
+    .mobile__overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.2);
+        inset: 0;
+        z-index: 2;
+
+        /* normal: hidden overlay */
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    /* 5.Kiểm tra xem mobile checkbox có được checked hay không */
+    .moblie__checkbox:checked ~ .mobile__overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 6.Menu Drawer */
+    .menu__drawer {
+        padding: 50px;
+        position: fixed;
+        background: #8bc6ec;
+        background: linear-gradient(151deg, #8bc6ec 0%, #d9afd9 80%);
+        background: -webkit-linear-gradient(151deg, #8bc6ec 0%, #d9afd9 80%);
+        background: -moz-linear-gradient(151deg, #8bc6ec 0%, #d9afd9 80%);
+        inset: 0 40% 0 0;
+        z-index: 3;
+
+        /* normal: sidebar không hiển thị nên cần chỉnh cho dịch sát vào lề trái */
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    /* 7.kiểm tra checkbox được check thì hiện lại menu drawer */
+    .moblie__checkbox:checked ~ .menu__drawer {
+        transform: translateX(0%);
+    }
+
+    /* style cho logo và close icon */
+    .menu__drawer--top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo__drawer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .close__menu-btn {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    #nav__bar--mobile {
+        margin-top: 25px;
+    }
+
+    .menu__link {
+        text-align: left;
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .menu__link:hover {
+        background-color: rgba(210, 233, 38, 0.4);
+    }
+
+    /* Khối HERO */
+    .header__hero {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+        padding-top: 50px;
+    }
+
+    .hero__info {
+        order: 2;
+    }
+
+    .hero__media {
+        order: 1;
+        transform: translateX(-25%);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mobile__login {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .login__group {
+        display: none;
+    }
+
+    .logo__group {
+        transform: translateX(150%);
+    }
+
+    .mobile__header-icon {
+        translate: -135% -65%;
+    }
+
+    .mobile__login {
+        margin-top: 30px;
+    }
+
+    #login__group--mobile .login {
+        color: #696d76;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        font-weight: 600;
+        border-top: 1.5px solid #999696;
+        padding-top: 15px;
+    }
+
+    #login__group--mobile .btn {
+        border: none;
+        background-color: transparent;
+        color: #696d76;
+        font-size: 1.6rem;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .menu__drawer {
+        padding: 30px;
+        inset: 0 20% 0 0;
+    }
+
+    .header__hero {
+        padding-top: 30px;
+    }
+
+    .fund__box,
+    .interest,
+    .download {
+        display: none;
+    }
+
+    .hero__info {
+        margin-right: 0;
+        margin-left: 10px;
+        width: 100vw;
+    }
+
+    .hero__heading {
+        font-size: 3rem;
+    }
+
+    .hero__desc {
+        font-size: 1.2rem;
+    }
+
+    .hero__heading-atc {
+        max-width: 90%;
+    }
+
+    .hero__note {
+        font-size: 1.2rem;
+    }
+}
