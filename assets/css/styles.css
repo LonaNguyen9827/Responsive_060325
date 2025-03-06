@@ -284,8 +284,15 @@ header {
     margin-top: 28px;
     max-width: 250px;
     height: 40px;
-    display: grid;
-    grid-template-columns: 40px 150px 60px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.phone__block:hover {
+    cursor: pointer;
+    transform: translateY(-15%);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
 }
 
 .phone__block-icon {
@@ -294,8 +301,7 @@ header {
 }
 
 .col-2 {
-    margin-left: 14px;
-    margin-right: 34px;
+    width: 44%;
 }
 
 .phone__block-title {
@@ -303,7 +309,7 @@ header {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .phone__block-desc {
@@ -318,7 +324,7 @@ header {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .phone__block-date {

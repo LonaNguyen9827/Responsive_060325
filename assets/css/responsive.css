@@ -205,4 +205,8 @@
     .hero__note {
         font-size: 1.2rem;
     }
+
+    .phone__case {
+        translate: -5%;
+    }
 }
