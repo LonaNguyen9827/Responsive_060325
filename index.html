@@ -16,9 +16,17 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- Animation AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- Animation Animate -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
 
         <!-- Responsive -->
         <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -73,7 +81,7 @@
                 <div class="header__hero">
                     <div class="hero__info">
                         <span class="hero__title">Digital Smart Wallet</span>
-                        <h1 class="hero__heading">
+                        <h1 class="hero__heading" data-aos="animate__pulse">
                             Digital
                             <strong class="hero__heading-payment">
                                 Payment
@@ -97,13 +105,16 @@
                     <div class="hero__media">
                         <div class="phone__case">
                             <!-- Interest -->
-                            <div class="interest">
+                            <div class="interest" data-aos="animate__zoomIn">
                                 <div class="interest__text">
                                     <strong>0%</strong> Interest
                                 </div>
                             </div>
                             <!-- Download -->
-                            <div class="download">
+                            <div
+                                class="download"
+                                data-aos="animate__fadeInLeft"
+                            >
                                 <div class="dl__group">
                                     <img
                                         src="./assets/img/download.svg"
@@ -246,7 +257,10 @@
                                 </div>
                             </div>
                             <!-- Secured Fund -->
-                            <div class="fund__box">
+                            <div
+                                class="fund__box"
+                                data-aos="animate__jackInTheBox"
+                            >
                                 <div class="fund__group">
                                     <img
                                         src="./assets/img/fund_icon.svg"
@@ -347,5 +361,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- Animation JS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                useClassNames: true,
+                initClassName: false,
+                animatedClassName: "animate__animated",
+            });
+        </script>
     </body>
 </html>

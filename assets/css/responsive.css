@@ -3,6 +3,10 @@
     .mobile__header {
         display: none;
     }
+
+    .hero__heading {
+        animation: none;
+    }
 }
 
 /* Tablet && Mobile */
